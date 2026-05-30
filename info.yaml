@@ -1,12 +1,14 @@
-# Tiny Tapeout project information (Wokwi project)
+# Tiny Tapeout project information
 project:
-  wokwi_id: 465419255686759425
+  wokwi_id: 0
   title: "Polyhouse Automation Controller"
   author: "GANTEDA CHANDANA"
   discord: ""
   description: "Simplified digital controller for polyhouse automation using soil, temperature and humidity inputs"
-  language: "Wokwi"
+  language: "Verilog"
   clock_hz: 0
+  source_files:
+    - "polyhouse_controller.v"
 
   tiles: "1x1"
 
