@@ -1,6 +1,5 @@
 `default_nettype none
-
-module chip (
+module tt_um_polyhouse_controller (
     input  wire [7:0] ui_in,
     output wire [7:0] uo_out,
     input  wire [7:0] uio_in,
@@ -10,7 +9,6 @@ module chip (
     input  wire       clk,
     input  wire       rst_n
 );
-
     wire soil_dry;
     wire temp_high;
     wire humidity_high;
@@ -24,12 +22,12 @@ module chip (
 
     assign abnormal = soil_dry | temp_high | humidity_high;
 
-    assign uo_out[0] = ena & soil_dry;
-    assign uo_out[1] = ena & temp_high;
-    assign uo_out[2] = ena & humidity_high;
-    assign uo_out[3] = ena & abnormal;
-    assign uo_out[4] = ena & ~abnormal;
-    assign uo_out[5] = ena & manual_mode;
+    assign uo_out[0] = ena & soil_dry;       // Pump ON
+    assign uo_out[1] = ena & temp_high;      // Fan ON
+    assign uo_out[2] = ena & humidity_high;  // Mist ON
+    assign uo_out[3] = ena & abnormal;       // Risk Alert
+    assign uo_out[4] = ena & ~abnormal;      // Healthy Status
+    assign uo_out[5] = ena & manual_mode;    // Manual Status
     assign uo_out[6] = 1'b0;
     assign uo_out[7] = 1'b0;
 
