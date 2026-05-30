@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="polyhouse" tests="5" failures="0" errors="0">
+    <testcase classname="polyhouse" name="test_soil_dry"/>
+    <testcase classname="polyhouse" name="test_temp_high"/>
+    <testcase classname="polyhouse" name="test_humidity_abnormal"/>
+    <testcase classname="polyhouse" name="test_healthy_status"/>
+    <testcase classname="polyhouse" name="test_manual_mode"/>
+  </testsuite>
+</testsuites>
